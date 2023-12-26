@@ -76,28 +76,28 @@ tinhDienTich = hinhChuNhat.cachTinhDienTich();
 // console.log(`Diện tích: ${tinhDienTich}`);
 
 // ---------------------Bài 6-----------------------
-function logMethod(target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) {
-    const originalMethod = descriptor.value;
+// function logMethod(target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) {
+//     const originalMethod = descriptor.value;
 
-    descriptor.value = function (this: any, ...args: any[]) {
-        console.log(`Call: ${String(propertyKey)} - ${JSON.stringify(args)}`);
-        const result = originalMethod.apply(this, args);
-        console.log(`Result ${String(propertyKey)}`);
-        return result;
-    };
+//     descriptor.value = function (this: any, ...args: any[]) {
+//         console.log(`Call: ${String(propertyKey)} - ${JSON.stringify(args)}`);
+//         const result = originalMethod.apply(this, args);
+//         console.log(`Result ${String(propertyKey)}`);
+//         return result;
+//     };
 
-    return descriptor;
-}
+//     return descriptor;
+// }
 
-class MyClass {
-    @logMethod
-    greet(name: string) {
-        console.log(name);
-    }
-}
+// class MyClass {
+//     @logMethod
+//     greet(name: string) {
+//         console.log(name);
+//     }
+// }
 
-const instance = new MyClass();
-instance.greet('Test');
+// const instance = new MyClass();
+// instance.greet('Test');
 
 
 // ---------------------Bài 7-----------------------
