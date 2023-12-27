@@ -31,7 +31,7 @@ var layPhanTuDauTien = function (arr) {
 var mangChuoi = ['a', 'b', 'c'];
 var phanTuDauTienmang;
 phanTuDauTienmang = layPhanTuDauTien(mangChuoi);
-console.log("Ph\u1EA7n t\u1EEB \u0111\u1EA7u ti\u00EAn c\u1EE7a m\u1EA3ng: s".concat(phanTuDauTienmang));
+// console.log(`Phần từ đầu tiên của mảng: ${phanTuDauTienmang}`);
 // ---------------------Bài 4-----------------------
 var Colors;
 (function (Colors) {
@@ -41,7 +41,7 @@ var Colors;
 })(Colors || (Colors = {}));
 ;
 var color = Colors.BLUE;
-// console.log(color);
+// console.log(`Màu:${color}`);
 // ---------------------Bài 5-----------------------
 var Rectangle = /** @class */ (function () {
     function Rectangle(chieuDai, chieuRong) {
@@ -57,8 +57,26 @@ var Rectangle = /** @class */ (function () {
 var hinhChuNhat = new Rectangle(5, 10);
 var tinhDienTich;
 tinhDienTich = hinhChuNhat.cachTinhDienTich();
-// console.log(tinhDienTich);
+// console.log(`Diện tích: ${tinhDienTich}`);
 // ---------------------Bài 6-----------------------
+// function logMethod(target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) {
+//     const originalMethod = descriptor.value;
+//     descriptor.value = function (this: any, ...args: any[]) {
+//         console.log(`Call: ${String(propertyKey)} - ${JSON.stringify(args)}`);
+//         const result = originalMethod.apply(this, args);
+//         console.log(`Result ${String(propertyKey)}`);
+//         return result;
+//     };
+//     return descriptor;
+// }
+// class MyClass {
+//     @logMethod
+//     greet(name: string) {
+//         console.log(name);
+//     }
+// }
+// const instance = new MyClass();
+// instance.greet('Test');
 // ---------------------Bài 7-----------------------
 var axios_1 = require("axios");
 function callAPI() {
