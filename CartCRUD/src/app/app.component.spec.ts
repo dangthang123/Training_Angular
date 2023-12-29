@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mode'`, () => {
+  it(`should have as title 'CartCRUD'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mode');
+    expect(app.title).toEqual('CartCRUD');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('mode app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('CartCRUD app is running!');
   });
 });

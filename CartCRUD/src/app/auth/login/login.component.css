@@ -1,0 +1,18 @@
+.login-warp {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    padding: 30px;
+    width: 70vh;
+}
+
+.create-account {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-decoration: none;
+    color: #00000073;
+    margin-top: 20px;
+}
+
+.create-account>span {
+    text-decoration: underline;
+}

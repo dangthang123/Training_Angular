@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mode": {
+    "CartCRUD": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mode",
+            "outputPath": "dist/CartCRUD",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -71,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mode:build:production"
+              "browserTarget": "CartCRUD:build:production"
             },
             "development": {
-              "browserTarget": "mode:build:development"
+              "browserTarget": "CartCRUD:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mode:build"
+            "browserTarget": "CartCRUD:build"
           }
         },
         "test": {
@@ -105,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "mode"
+  "defaultProject": "CartCRUD"
 }

@@ -1,0 +1,19 @@
+{
+    "user": [
+        {
+            "firstname": "thang",
+            "lastname": "dang",
+            "email": "a@gmail.com",
+            "password": "Thangtn@1",
+            "sex": "girl",
+            "token": "a91d656f-06f3-4fb3-bf7e-2c125d1d1ea3",
+            "id": 1
+        }
+    ],
+    "book": [
+        {
+            "id": 1,
+            "name": "Test1"
+        }
+    ]
+}
