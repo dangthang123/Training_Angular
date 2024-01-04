@@ -8,8 +8,15 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
+  declarations: [
+    LoginComponent,
+    RegisterComponent
+  ],
   imports: [
     MatInputModule,
     MatFormFieldModule,
@@ -17,13 +24,13 @@ import { RegisterComponent } from './register/register.component';
     MatDividerModule,
     MatButtonModule,
     MatCardModule,
+    RouterModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   exports: [
   ],
-  declarations: [
-    LoginComponent,
-    RegisterComponent
-  ],
+
   providers: [],
 })
 export class AuthModule { }

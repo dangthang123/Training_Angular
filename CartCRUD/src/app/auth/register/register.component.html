@@ -1,32 +1,73 @@
-<div class="container mt-4 login-warp">
-    <mat-card-title>Login</mat-card-title>
-    <form class="login-form d-flex flex-column">
-
+<div class="container mt-3 login-warp">
+    <mat-card-title>Đăng Ký</mat-card-title>
+    <form class="login-form d-flex flex-column mt-4" [formGroup]="userForm" *ngIf="!isLogin">
         <mat-form-field class="example-full-width">
-            <mat-label>FistName</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com">
-            <mat-error>Fist Name is <strong>required</strong></mat-error>
+            <mat-label>Họ và tên </mat-label>
+            <input type="text" matInput placeholder="Ex. dang van a" formControlName="name">
+            <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+                Họ không được để trống</mat-error>
+
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-            <mat-label>LastName</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com">
-            <mat-error>Last Name is <strong>required</strong></mat-error>
+            <mat-label>Số điện thoại</mat-label>
+            <input type="text" matInput placeholder="Ex. 0123456789" formControlName="sdt">
+            <mat-error *ngIf="userForm.get('sdt')?.hasError('required')">
+                Số điện thoại không được để trống</mat-error>
+            <mat-error *ngIf="userForm.get('sdt')?.hasError('invalidPhoneNumberLength')">
+                Số điện thoại phải chứa 10 ký tự
+            </mat-error>
+            <mat-error *ngIf="userForm.get('sdt')?.hasError('invalidPhoneNumberFormat')">
+                Số điện thoại phải là số
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Địa chỉ</mat-label>
+            <input type="text" matInput placeholder="Ex. xóm A -Phường A -TPTN" formControlName="address">
+            <mat-error *ngIf="userForm.get('address')?.hasError('required')">
+                Địa chỉ không được để trống</mat-error>
+            <mat-error *ngIf="userForm.get('address')?.hasError('maxlength')">
+                Địa chỉ không được quá 50 ký tự</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com">
-            <mat-error>Please enter a valid email address</mat-error>
-            <mat-error>Email is <strong>required</strong></mat-error>
+            <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+            <mat-error *ngIf="userForm.get('email')?.hasError('email') && !userForm.get('email')?.hasError('required')">
+                Nhập địa chỉ email hợp lệ</mat-error>
+            <mat-error *ngIf="userForm.get('email')?.hasError('required')">Email không được để trống</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Tên đăng nhập</mat-label>
+            <input type="text" matInput placeholder="Ex. danga" formControlName="username">
+            <mat-error *ngIf="userForm.get('username')?.hasError('required')">
+                Tên không được để trống</mat-error>
+            <mat-error *ngIf="userForm.get('invalidUsername')?.hasError('required')">
+                Tên đăng nhập không chứa ký tự đặc biệt và có độ dài từ 3 đến 20 ký tự</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
-            <input type="email" matInput placeholder="Ex. 123456789">
-            <mat-error>Password is <strong>required</strong></mat-error>
+            <input type="{{ passwordHidden ? 'password' : 'text' }}" matInput placeholder="Ex. 12345657"
+                formControlName="password">
+            <button mat-icon-button matSuffix (click)="togglePasswordVisibility()"
+                [attr.aria-label]="passwordHidden ? 'Show password' : 'Hide password'">
+                <mat-icon>{{ passwordHidden ? 'visibility' : 'visibility_off' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="userForm.get('password')?.hasError('required')">Password không được để trống</mat-error>
+            <mat-error *ngIf="userForm.get('password')?.hasError('invalidPassword')">Mật khẩu phải có ít nhất 9
+                ký tự đến 32 ký tự, chứa các ký tự đặc biệt và có ít nhất một chữ cái viết hoa.
+            </mat-error>
         </mat-form-field>
-
-        <button type="submit" mat-raised-button color="accent">Submit</button>
+        <button mat-raised-button color="accent" type="submit" class="mt-2" (click)="handleSubmit()">Đăng ký</button>
     </form>
+    <div *ngIf="isLogin">
+        <span>Đã đăng nhập thành công !!!</span>
+        <a routerLink="" class="create-account">
+            <mat-icon>arrow_right_alt</mat-icon>
+            <span>Trở về trang chủ</span>
+        </a>
+    </div>
 </div>

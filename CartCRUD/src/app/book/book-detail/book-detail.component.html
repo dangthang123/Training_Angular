@@ -1,0 +1,72 @@
+<div class="container mt-5 mb-5" *ngIf="dataIsBook">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <mat-card class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center p-4">
+                                <img id="main-image" [src]="dataIsBook.book_image" width="250" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product p-4">
+                            <div class="mt-2 mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="text-uppercase">{{dataIsBook.book_name}}</h5>
+                                    <span class="text-muted brand">Năm XB:
+                                        <strong>{{dataIsBook.book_date}}</strong></span>
+                                </div>
+                                <span class="text-capitalize  text-muted brand">Tác giả:
+                                    <strong>{{dataIsBook.book_author}}</strong></span>
+                                <div class="price d-flex flex-row align-items-center mt-1">
+                                    <span class="act-price">{{dataIsBook.book_price|
+                                        currency:'VND':'symbol':'4.0'}}</span>
+                                </div>
+                            </div>
+                            <p class="about">{{dataIsBook.book_short_description}}</p>
+                            <div class="sizes mt-2">
+                                <span class="text-muted brand"> Số lượng còn lại :
+                                    <strong>{{dataIsBook.book_quantity}}</strong> quyển</span>
+                                <br>
+                                <span class="text-muted brand"> Số lượng :</span>
+                                <div class="qty-input">
+                                    <button class="qty-count qty-count--minus" data-action="minus" type="button"
+                                        (click)="decreaseQuantity()">-</button>
+                                    <input class="product-qty" type="number" name="product-qty" min="0"
+                                        [max]=" dataIsBook?.book_quantity " [(ngModel)]="quantity">
+                                    <button class="qty-count qty-count--add" data-action="add" type="button"
+                                        (click)="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+                            <div class="cart mt-4 align-items-center">
+                                <button class="btn btn-danger text-uppercase mr-2 px-4" (click)="addToCart()">Thêm vào
+                                    giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <mat-tab-group class="mt-5">
+        <mat-tab label="Mô tả"> {{dataIsBook.book_description}}</mat-tab>
+        <mat-tab label="Đánh Giá">
+            <div class="evaluate">
+                <mat-card *ngFor="let item of dataIsBook.book_evaluate">
+                    <div class="avatar">
+                        <mat-icon>account_circle</mat-icon>
+                    </div>
+                    <div class="user-info">
+                        <span>{{item.name}}</span>
+                        <div>
+                            <mat-icon *ngFor="let star of getStars(item.point_evaluated)">star</mat-icon>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+
+        </mat-tab>
+    </mat-tab-group>
+</div>

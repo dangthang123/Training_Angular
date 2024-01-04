@@ -1,0 +1,111 @@
+.card {
+    border: none
+}
+
+.product {
+    background-color: #eee
+}
+
+.brand {
+    font-size: 13px
+}
+
+.act-price {
+    color: red;
+    font-weight: 700
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+label.radio input:checked+span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff
+}
+
+.btn-danger {
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important
+}
+
+.btn-danger:hover {
+    background-color: #da0606 !important;
+    border-color: #da0606 !important
+}
+
+.btn-danger:focus {
+    box-shadow: none
+}
+
+.cart i {
+    margin-right: 10px
+}
+
+.qty-count {
+    border: 1px solid #000;
+    background: #fff;
+    width: 30px;
+    height: 28px;
+}
+
+.qty-input>input {
+    text-align: center;
+    width: 60px;
+    margin: auto;
+    border: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.evaluate>.mat-card {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.evaluate .mat-card .avatar {
+    width: 50px;
+}
+
+.evaluate .mat-card .avatar>.mat-icon {
+    font-size: 40px;
+
+}
+
+.user-info .mat-icon {
+    color: rgb(255, 180, 0);
+}

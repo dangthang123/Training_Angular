@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <mat-card class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="a">Angular Training</a>
+        <a class="navbar-brand" href="">Angular Training</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,12 +12,28 @@
                     <a class="nav-link px-3" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" routerLink="">
-                        <div matBadge="4" matBadgeOverlap="false" class="demo-section">Cart</div>
+                    <a class="nav-link px-3" routerLink="/cart">
+                        <div matBadge="4" matBadgeOverlap="false" class="demo-section" matBadgeColor="accent">Cart</div>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="!isLogin">
                     <a routerLink="/login" class="nav-link px-3">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="isLogin">
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+                        class="mx-3">
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu" class="menu-abc">
+                        <button mat-menu-item>
+                            <mat-icon>face</mat-icon>
+                            <span>{{dataProfile.name}}</span>
+                        </button>
+                        <button mat-menu-item (click)="handleLogout()">
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </mat-menu>
                 </li>
             </ul>
         </div>

@@ -1,22 +1,38 @@
 <div class="container mt-4 login-warp">
-    <mat-card-title>Login</mat-card-title>
-    <form class="login-form d-flex flex-column">
-        <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com">
-            <mat-error>Please enter a valid email address</mat-error>
-            <mat-error>Email is <strong>required</strong></mat-error>
+    <mat-card-title>Đăng Nhập</mat-card-title>
+    <form class="login-form d-flex flex-column" [formGroup]="loginForm" *ngIf="!isLogin">
 
+        <mat-form-field class="example-full-width">
+            <mat-label>Tên đăng nhập</mat-label>
+            <input type="email" matInput placeholder="Ex. dangthang" formControlName="userNamelLogin">
+            <mat-error *ngIf="loginForm.get('userNamelLogin')?.hasError('required')">
+                Tên người dùng không hợp lệ. Vui lòng nhập lại.</mat-error>
         </mat-form-field>
+
         <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
-            <input type="email" matInput placeholder="Ex. 123456789">
-            <mat-error>Password is <strong>required</strong></mat-error>
+            <input type="{{ passwordHidden ? 'password' : 'text' }}" matInput placeholder="Ex. Thangtn@1"
+                formControlName="passwordLogin">
+            <button mat-icon-button matSuffix (click)="togglePasswordVisibility()"
+                [attr.aria-label]="passwordHidden ? 'Show password' : 'Hide password'">
+                <mat-icon>{{ passwordHidden ? 'visibility' : 'visibility_off' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="loginForm.get('passwordLogin')?.hasError('required')">
+                Mật khẩu không hợp lệ. Vui lòng nhập lại
+            </mat-error>
         </mat-form-field>
-        <button type="submit" mat-raised-button color="accent">Submit</button>
+
+        <button type="submit" mat-raised-button color="accent" (click)="handleLogin()" class="mt-3">Đăng Nhập</button>
+        <a routerLink="/register" class="create-account">
+            <mat-icon>arrow_right_alt</mat-icon>
+            <span>Tạo tài khoản mới</span>
+        </a>
     </form>
-    <a routerLink="/register" class="create-account">
-        <mat-icon>arrow_right_alt</mat-icon>
-        <span>Create new account</span>
-    </a>
+    <div *ngIf="isLogin">
+        <span>Đăng nhập thành công !!!</span>
+        <a routerLink="" class="create-account">
+            <mat-icon>arrow_right_alt</mat-icon>
+            <span>Trở về Trang chủ</span>
+        </a>
+    </div>
 </div>

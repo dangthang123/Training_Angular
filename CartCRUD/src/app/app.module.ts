@@ -6,15 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
-import { TestComponent } from './test/test.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-
-
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { CartModule } from './cart/cart.module';
+import { BookModule } from './book/books.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +21,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
     BrowserAnimationsModule,
     SharedModule,
     AuthModule,
+    CartModule,
+    BookModule,
+    CommonModule,
+    HttpClientModule,
 
   ],
   providers: [],
