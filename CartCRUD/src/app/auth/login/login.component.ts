@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
     );
 
     if (foundUser && foundUser.token) {
-      // console.log('Login successful');
       const userToSave = {
         id: foundUser.id,
         username: foundUser.username,
@@ -58,15 +57,19 @@ export class LoginComponent implements OnInit {
       }).then(() => {
         window.location.reload();
       });
-      this.router.navigate(['']);
+      const lastPath = window.localStorage.getItem('last-path');
+      if (lastPath) {
+        this.router.navigateByUrl(lastPath);
+        window.localStorage.removeItem('last-path');
+      } else {
+        this.router.navigate(['']);
+      }
     } else {
-      // console.log('Invalid credentials');
       Swal.fire({
         title: "Thông Báo",
         text: "Tên người dùng hoặc mật khẩu không chính xác. Vui lòng thử lại !",
         icon: "error"
       });
-
     }
 
   };

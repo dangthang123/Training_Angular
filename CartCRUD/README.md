@@ -28,3 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## skip file Tests(.spec)
 ng generate component header --skipTests=true 
+
+## Start DB Json Server
+ cd .\src\assets\
+ 
+## Run Server
+json-server --watch db.json

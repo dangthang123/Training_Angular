@@ -21,6 +21,17 @@
       "role": "user",
       "token": "3dcfe50b-0833-48b2-8b3b-1da92305a686",
       "id": 2
+    },
+    {
+      "username": "dangthang2",
+      "name": "dang thang",
+      "sdt": "0203021322",
+      "address": "abc",
+      "email": "a@gmail.com",
+      "password": "Thangtn@1",
+      "role": "user",
+      "token": "5eff84d6-e395-42a8-8ea4-861836a64fe0",
+      "id": 3
     }
   ],
   "book": [

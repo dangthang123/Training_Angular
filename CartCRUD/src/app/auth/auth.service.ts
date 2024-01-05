@@ -7,6 +7,7 @@ const BASE = 'http://localhost:3000/user'
 
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'user-token';
+const PATH_KEY = 'last-path';
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +15,8 @@ const USER_KEY = 'user-token';
 export class AuthService {
 
     constructor(
-        private http: HttpClient) {
+        private http: HttpClient,
+    ) {
     }
     createUser(data: IUser): Observable<IUser> {
         return this.http.post<IUser>(BASE, { ...data })
@@ -23,12 +25,13 @@ export class AuthService {
         return this.http.get<IUser[]>(BASE)
     }
 
-
     // Token vs Username
 
     signOut(): void {
+        const path = window.location.pathname;
         window.localStorage.clear();
         window.location.reload();
+        window.localStorage.setItem(PATH_KEY, path);
     }
     saveToken(token: string): void {
         window.localStorage.setItem(TOKEN_KEY, token);

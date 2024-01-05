@@ -40,7 +40,6 @@ export class RegisterComponent implements OnInit {
   handleSubmit() {
     if (this.userForm.valid) {
       // console.log(this.userForm.value);
-
       const token = uuid();
       const userDataWithToken: IUser = {
         ...this.userForm.getRawValue(),
