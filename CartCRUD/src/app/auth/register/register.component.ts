@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
           title: "Thông báo ",
           text: "Tạo tài khoản thành công",
         });
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
       })
     } else {
       // console.log("error");

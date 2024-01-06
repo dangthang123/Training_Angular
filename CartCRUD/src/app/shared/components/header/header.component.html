@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="!isLogin">
-                    <a routerLink="/login" class="nav-link px-3">Login</a>
+                    <a routerLink="/auth/login" class="nav-link px-3">Login</a>
                 </li>
                 <li class="nav-item" *ngIf="isLogin">
                     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"

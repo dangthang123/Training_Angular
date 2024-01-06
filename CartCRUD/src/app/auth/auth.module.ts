@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthRoutingModule } from './auth-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,9 @@ import { CommonModule } from '@angular/common';
     MatDividerModule,
     MatButtonModule,
     MatCardModule,
-    RouterModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    AuthRoutingModule,
   ],
   exports: [
   ],
