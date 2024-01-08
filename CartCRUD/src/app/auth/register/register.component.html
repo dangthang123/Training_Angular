@@ -4,7 +4,9 @@
         <mat-form-field class="example-full-width">
             <mat-label>Họ và tên </mat-label>
             <input type="text" matInput placeholder="Ex. dang van a" formControlName="name">
-            <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+            <!-- <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+                Họ không được để trống</mat-error> -->
+            <mat-error *ngIf="userForm.controls.name?.errors?.['required']">
                 Họ không được để trống</mat-error>
 
         </mat-form-field>
@@ -12,12 +14,12 @@
         <mat-form-field class="example-full-width">
             <mat-label>Số điện thoại</mat-label>
             <input type="text" matInput placeholder="Ex. 0123456789" formControlName="sdt">
-            <mat-error *ngIf="userForm.get('sdt')?.hasError('required')">
+            <mat-error *ngIf="userForm.controls.sdt?.errors?.['required']">
                 Số điện thoại không được để trống</mat-error>
-            <mat-error *ngIf="userForm.get('sdt')?.hasError('invalidPhoneNumberLength')">
+            <mat-error *ngIf="userForm.controls.sdt?.errors?.['invalidPhoneNumberLength']">
                 Số điện thoại phải chứa 10 ký tự
             </mat-error>
-            <mat-error *ngIf="userForm.get('sdt')?.hasError('invalidPhoneNumberFormat')">
+            <mat-error *ngIf="userForm.controls.sdt?.errors?.['invalidPhoneNumberFormat']">
                 Số điện thoại phải là số
             </mat-error>
         </mat-form-field>
@@ -25,26 +27,27 @@
         <mat-form-field class="example-full-width">
             <mat-label>Địa chỉ</mat-label>
             <input type="text" matInput placeholder="Ex. xóm A -Phường A -TPTN" formControlName="address">
-            <mat-error *ngIf="userForm.get('address')?.hasError('required')">
+            <mat-error *ngIf="userForm.controls.address?.errors?.['required']">
                 Địa chỉ không được để trống</mat-error>
-            <mat-error *ngIf="userForm.get('address')?.hasError('maxlength')">
+            <mat-error *ngIf="userForm.controls.address?.errors?.['maxlength']">
                 Địa chỉ không được quá 50 ký tự</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
             <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
-            <mat-error *ngIf="userForm.get('email')?.hasError('email') && !userForm.get('email')?.hasError('required')">
+            <mat-error
+                *ngIf="userForm.controls.email?.errors?.['email'] && !userForm.controls.email?.errors?.['required']">
                 Nhập địa chỉ email hợp lệ</mat-error>
-            <mat-error *ngIf="userForm.get('email')?.hasError('required')">Email không được để trống</mat-error>
+            <mat-error *ngIf="userForm.controls.email?.errors?.['required']">Email không được để trống</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Tên đăng nhập</mat-label>
             <input type="text" matInput placeholder="Ex. danga" formControlName="username">
-            <mat-error *ngIf="userForm.get('username')?.hasError('required')">
+            <mat-error *ngIf="userForm.controls.username?.errors?.['required']">
                 Tên không được để trống</mat-error>
-            <mat-error *ngIf="userForm.get('invalidUsername')?.hasError('required')">
+            <mat-error *ngIf="userForm.controls.invalidUsername?.errors?.['required']">
                 Tên đăng nhập không chứa ký tự đặc biệt và có độ dài từ 3 đến 20 ký tự</mat-error>
         </mat-form-field>
 
@@ -56,8 +59,8 @@
                 [attr.aria-label]="passwordHidden ? 'Show password' : 'Hide password'">
                 <mat-icon>{{ passwordHidden ? 'visibility' : 'visibility_off' }}</mat-icon>
             </button>
-            <mat-error *ngIf="userForm.get('password')?.hasError('required')">Password không được để trống</mat-error>
-            <mat-error *ngIf="userForm.get('password')?.hasError('invalidPassword')">Mật khẩu phải có ít nhất 9
+            <mat-error *ngIf="userForm.controls.password?.errors?.['required']">Password không được để trống</mat-error>
+            <mat-error *ngIf="userForm.controls.password?.errors?.['invalidPassword']">Mật khẩu phải có ít nhất 9
                 ký tự đến 32 ký tự, chứa các ký tự đặc biệt và có ít nhất một chữ cái viết hoa.
             </mat-error>
         </mat-form-field>

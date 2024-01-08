@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BookListComponent } from './book-list/book-list.component';
-import { RouterModule } from '@angular/router';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -12,13 +11,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { BookRoutingModule } from './book-routing.module';
 @NgModule({
 
     declarations: [
         BookListComponent,
         BookDetailComponent],
     imports: [
-        RouterModule,
         MatGridListModule,
         MatCardModule,
         MatButtonModule,
@@ -28,6 +27,7 @@ import { FormsModule } from '@angular/forms';
         MatPaginatorModule,
         MatTabsModule,
         FormsModule,
+        BookRoutingModule,
     ],
     exports: [],
     providers: [],

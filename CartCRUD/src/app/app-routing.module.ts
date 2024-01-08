@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { LoginComponent } from './auth/login/login.component';
-// import { RegisterComponent } from './auth/register/register.component';
 import { CartComponent } from './cart/cart/cart.component';
 import { AuthGuard } from './auth/auth.guard';
 import { BookListComponent } from './book/book-list/book-list.component';
 import { BookDetailComponent } from './book/book-detail/book-detail.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const routes: Routes = [
   {
@@ -15,20 +14,21 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: BookListComponent,
-  },
-  {
-    path: 'book/:id',
-    component: BookDetailComponent,
+    loadChildren: () =>
+      import('../app/book/books.module').then(m => m.BookModule)
   },
   {
     path: 'cart',
-    component: CartComponent,
-    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('../app/cart/cart.module').then(m => m.CartModule)
+  },
+  {
+    path: 'not-found-404',
+    component: NotFoundPageComponent,
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'not-found-404',
     pathMatch: 'full',
   }
 

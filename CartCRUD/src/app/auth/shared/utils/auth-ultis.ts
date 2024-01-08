@@ -1,6 +1,6 @@
-import { AbstractControl, ValidatorFn } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-export function passwordValidator(control: AbstractControl): { [key: string]: boolean } | null {
+export function passwordValidator(control: AbstractControl): ValidationErrors | null | null {
     const password = control.value;
     if (password) {
         const pattern = /^(?=.*[!@#$%^&*])(?=.*[A-Z])[A-Za-z\d!@#$%^&*]{8,32}$/;
@@ -12,7 +12,7 @@ export function passwordValidator(control: AbstractControl): { [key: string]: bo
 }
 
 export function phoneNumberValidator(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
+    return (control: AbstractControl): ValidationErrors | null => {
         const phoneNumber = control.value;
         if (phoneNumber && phoneNumber.length !== 10) {
             return { 'invalidPhoneNumberLength': true };
@@ -28,7 +28,7 @@ export function phoneNumberValidator(): ValidatorFn {
 
 
 export function usernameValidator(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
+    return (control: AbstractControl): ValidationErrors | null => {
         const username = control.value;
         if (!username) {
             return null;

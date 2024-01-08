@@ -10,10 +10,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CartModule } from './cart/cart.module';
 import { BookModule } from './book/books.module';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,11 +32,13 @@ export class LoginComponent implements OnInit {
       this.isLogin = false;
     }
 
+
+
   }
   handleLogin(): void {
     const { userNamelLogin, passwordLogin } = this.loginForm.value;
     const foundUser = this.dataUser.find(
-      (user: any) => user.username === userNamelLogin && user.password === passwordLogin
+      (user: IUser) => user.username === userNamelLogin && user.password === passwordLogin
     );
 
     if (foundUser && foundUser.token) {
@@ -70,6 +72,7 @@ export class LoginComponent implements OnInit {
         text: "Tên người dùng hoặc mật khẩu không chính xác. Vui lòng thử lại !",
         icon: "error"
       });
+
     }
 
   };
