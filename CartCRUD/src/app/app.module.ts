@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartModule } from './cart/cart.module';
 import { BookModule } from './book/books.module';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { DashBoardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     BookModule,
     CommonModule,
     HttpClientModule,
+    DashBoardModule
 
   ],
   providers: [],

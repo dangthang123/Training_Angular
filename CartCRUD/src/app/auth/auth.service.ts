@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { IUser } from './shared/models/user';
+import { Router } from '@angular/router';
 
 const BASE = 'http://localhost:3000/user'
 
@@ -13,9 +14,9 @@ const PATH_KEY = 'last-path';
     providedIn: 'root'
 })
 export class AuthService {
-
     constructor(
         private http: HttpClient,
+        private router: Router,
     ) {
     }
     createUser(data: IUser): Observable<IUser> {
@@ -30,8 +31,10 @@ export class AuthService {
     signOut(): void {
         const path = window.location.pathname;
         window.localStorage.clear();
-        window.location.reload();
         window.localStorage.setItem(PATH_KEY, path);
+        this.router.navigateByUrl('/auth/login').then(() => {
+            window.location.reload();
+        });
     }
     saveToken(token: string): void {
         window.localStorage.setItem(TOKEN_KEY, token);
@@ -47,6 +50,7 @@ export class AuthService {
     getUserName(): string | null {
         return window.localStorage.getItem(USER_KEY);
     }
+
     // Kiểm tra token
     isTokenValid(): boolean {
         const storedToken = this.getToken();
@@ -60,6 +64,5 @@ export class AuthService {
         }
         return false;
     }
-
 
 }

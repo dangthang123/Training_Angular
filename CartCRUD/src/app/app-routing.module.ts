@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartComponent } from './cart/cart/cart.component';
 import { AuthGuard } from './auth/auth.guard';
-import { BookListComponent } from './book/book-list/book-list.component';
-import { BookDetailComponent } from './book/book-detail/book-detail.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const routes: Routes = [
@@ -15,12 +12,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('../app/book/books.module').then(m => m.BookModule)
+      import('../app/book/books.module').then(m => m.BookModule),
   },
   {
     path: 'cart',
     loadChildren: () =>
-      import('../app/cart/cart.module').then(m => m.CartModule)
+      import('../app/cart/cart.module').then(m => m.CartModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('../app/dashboard/dashboard.module').then(m => m.DashBoardModule),
   },
   {
     path: 'not-found-404',

@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <mat-card class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="">Angular Training</a>
+        <a class="navbar-brand" routerLink="">Angular Training</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,15 +9,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
-                    <a class="nav-link px-3" href="">Home</a>
+                    <a class="nav-link px-3" href="">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link px-3" routerLink="/cart">
-                        <div matBadge="0" matBadgeOverlap="false" class="demo-section" matBadgeColor="accent">Cart</div>
+                        <div [matBadge]="cartLength" matBadgeOverlap="false" class="demo-section"
+                            matBadgeColor="accent">Giỏ hàng</div>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="!isLogin">
-                    <a routerLink="/auth/login" class="nav-link px-3">Login</a>
+                    <a routerLink="/auth/login" class="nav-link px-3">Đăng nhập</a>
                 </li>
                 <li class="nav-item" *ngIf="isLogin">
                     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
@@ -31,7 +32,7 @@
                         </button>
                         <button mat-menu-item (click)="handleLogout()">
                             <mat-icon>exit_to_app</mat-icon>
-                            <span>Logout</span>
+                            <span>Đăng xuất</span>
                         </button>
                     </mat-menu>
                 </li>

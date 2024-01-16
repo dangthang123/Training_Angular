@@ -1,1 +1,96 @@
-<p>checkout works!</p>
+<div class="card py-4">
+    <div class="row ">
+        <div class="col-md-7 px-5">
+            <form class="example-form" [formGroup]="userFormOrder">
+                <h3 class="">Thông tin</h3>
+                <div class="d-flex w-100 gap-4">
+                    <mat-form-field class="example-full-width py-2">
+                        <mat-label>Họ và tên</mat-label>
+                        <input type="text" matInput formControlName="name" placeholder="Ex. Nguyễn Văn A">
+                        <mat-error *ngIf="userFormOrder.controls.name?.errors?.['required']">
+                            Họ và tên không được để trống</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width py-2">
+                        <mat-label>Số điện thoại</mat-label>
+                        <input type="text" matInput formControlName="sdt" placeholder="Ex. 0123456789">
+                        <mat-error *ngIf="userFormOrder.controls.sdt?.errors?.['required']">
+                            Số điện thoại không được để trống</mat-error>
+                        <mat-error *ngIf="userFormOrder.controls.sdt?.errors?.['invalidPhoneNumberLength']">
+                            Số điện thoại phải chứa 10 ký tự
+                        </mat-error>
+                        <mat-error *ngIf="userFormOrder.controls.sdt?.errors?.['invalidPhoneNumberFormat']">
+                            Số điện thoại phải là số
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="example-full-width py-2">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                    <mat-error
+                        *ngIf="userFormOrder.controls.email?.errors?.['email'] && !userFormOrder.controls.email?.errors?.['required']">
+                        Nhập địa chỉ email hợp lệ</mat-error>
+                    <mat-error *ngIf="userFormOrder.controls.email?.errors?.['required']">Email không được để
+                        trống</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width py-2">
+                    <mat-label>Địa chỉ</mat-label>
+                    <input type="text" matInput formControlName="address" placeholder="Ex. Xóm A - xã A - Thành phố A">
+                    <mat-error *ngIf="userFormOrder.controls.address?.errors?.['required']">
+                        Địa chỉ không được để trống</mat-error>
+                    <mat-error *ngIf="userFormOrder.controls.address?.errors?.['maxlength']">
+                        Địa chỉ không được quá 50 ký tự</mat-error>
+                </mat-form-field>
+                <h3 class="py-3">Giao hàng</h3>
+                <mat-label class="h5">Phương thức giao hàng:</mat-label>
+                <mat-radio-group aria-label="Select an option" class="d-flex flex-column gap-3 pt-3"
+                    formControlName="delivery">
+                    <mat-radio-button value="Thanh toán trước">Thanh toán trước</mat-radio-button>
+                    <mat-radio-button value="Nhận khi giao hàng">Nhận khi giao hàng</mat-radio-button>
+                    <mat-error *ngIf="userFormOrder.controls.delivery?.errors?.['required']">
+                        Chưa chọn phương thức thanh toán</mat-error>
+                </mat-radio-group>
+
+                <mat-form-field class="example-full-width py-3">
+                    <mat-label>Mô tả:</mat-label>
+                    <textarea matInput placeholder="Ex. It makes me feel..." formControlName="describe"></textarea>
+                </mat-form-field>
+            </form>
+            <button type='submit' mat-raised-button color="accent" (click)="handleSubmitOrder()">Thanh toán</button>
+        </div>
+        <div class="col-md-5 order-right">
+            <h3>Thông tin sản phẩm</h3>
+            <div class="item-list mx-3 " *ngIf="dataOrder">
+                <div class="item-order">
+                    <div class="col-order fw-bold ">Sản phẩm</div>
+                    <div class="col-order fw-bold">Tên sản phẩm</div>
+                    <div class="col-order fw-bold">Số lượng</div>
+                    <div class="col-order fw-bold">Giá</div>
+                </div>
+                <div class="item-order" *ngFor="let item of dataOrder">
+                    <div class="col-order">
+                        <img [src]="item.book_image" alt="img" />
+                    </div>
+                    <div class="col-order">
+                        <span>{{item.book_name}}</span>
+                    </div>
+                    <div class="col-order">
+                        <span>{{item.total_quantity }}</span>
+                    </div>
+                    <div class="col-order">
+                        <div>{{item.book_price|currency:'VND':'symbol':'4.0'}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-order d-flex justify-content-between m-3 align-items-center ">
+                <div class="price fw-bold h4"> Số lượng: </div>
+                <div class="price h5"> {{lengthOrder}} sản phẩm</div>
+            </div>
+            <div class="total-order d-flex justify-content-between m-3 align-items-center ">
+                <div class="price fw-bold h4"> Tổng tiền: </div>
+                <div class="price h5"> {{totalOrder|currency:'VND':'symbol':'4.0'}} </div>
+            </div>
+        </div>
+    </div>
+</div>

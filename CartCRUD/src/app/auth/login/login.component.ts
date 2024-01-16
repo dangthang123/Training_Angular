@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         name: foundUser.name,
         sdt: foundUser.sdt,
         email: foundUser.email,
+        address: foundUser.address,
         token: foundUser.token,
       };
       this.authService.saveUser(userToSave)
@@ -60,12 +61,16 @@ export class LoginComponent implements OnInit {
         window.location.reload();
       });
       const lastPath = window.localStorage.getItem('last-path');
+      console.log(lastPath);
+
       if (lastPath) {
         this.router.navigateByUrl(lastPath);
         window.localStorage.removeItem('last-path');
       } else {
         this.router.navigate(['']);
+
       }
+
     } else {
       Swal.fire({
         title: "Thông Báo",

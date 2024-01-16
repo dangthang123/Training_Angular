@@ -1,0 +1,44 @@
+.card {
+    margin: auto;
+    max-width: 100%;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+    margin-top: 30px;
+}
+
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+td {
+    padding-right: 8px;
+}
+
+
+
+.order-right .item-list .item-order {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.order-right .item-list .item-order>.col-order {
+    flex: 0 0 25%;
+    width: 25%;
+    border-top: 1px solid rgba(0, 0, 0, 0.203);
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.total-order {
+    border-top: 1px solid rgba(0, 0, 0, 0.203);
+}

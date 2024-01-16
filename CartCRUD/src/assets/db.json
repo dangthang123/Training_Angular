@@ -32,16 +32,27 @@
       "role": "user",
       "token": "5eff84d6-e395-42a8-8ea4-861836a64fe0",
       "id": 3
+    },
+    {
+      "username": "dangthang12",
+      "name": "dang duc thang",
+      "sdt": "0123123212",
+      "address": "acbac",
+      "email": "a@gmail.com",
+      "password": "Thangtn@1",
+      "role": "user",
+      "token": "91485b33-1b93-4a27-94fc-bde2a2d739d6",
+      "id": 4
     }
   ],
   "book": [
     {
       "id": 1,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Câu Chuyện Đời",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -63,10 +74,10 @@
     {
       "id": 2,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Combo ebook Hiphop",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -88,10 +99,10 @@
     {
       "id": 3,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Combo ebook Nam ",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -113,10 +124,10 @@
     {
       "id": 4,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Combo ebook Chuyện",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -138,10 +149,10 @@
     {
       "id": 5,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Combo ebook Bổn ",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -163,10 +174,10 @@
     {
       "id": 6,
       "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
-      "book_name": "book 1",
+      "book_name": "Combo ebook Susie",
       "book_quantity": 20,
       "book_price": 200000,
-      "book_author": "book",
+      "book_author": "Nguyễn Văn A",
       "book_date": 2000,
       "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -184,6 +195,95 @@
           "point_evaluated": 5
         }
       ]
+    }
+  ],
+  "order": [
+    {
+      "name": "dang duc thang",
+      "sdt": "0131233123",
+      "email": "a@gmail.com",
+      "address": "a",
+      "delivery": "Thanh toán trước",
+      "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet nisl mi, eget malesuada tortor condimentum eu. Integer eleifend ante vitae turpis bibendum, quis accumsan nunc convallis. Integer rutrum augue at tortor sodales mattis. Aliquam efficitur, felis et vestibulum vehicula, neque ante ullamcorper nibh, at mollis sem nibh eget magna. Duis mollis viverra magna vitae lobortis. In malesuada id quam quis dignissim. Etiam rhoncus ullamcorper orci, non placerat metus efficitur vitae. Curabitur ultricies sed orci id scelerisque. Quisque consequat, eros sit amet lacinia fringilla, massa ligula convallis libero, non mollis enim odio id magna. ",
+      "order": [
+        {
+          "id": 1,
+          "book_name": "Câu Chuyện Đời",
+          "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
+          "book_price": 200000,
+          "book_quantity": 20,
+          "book_author": "Nguyễn Văn A",
+          "book_date": 2000,
+          "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "total_quantity": 1
+        }
+      ],
+      "total_quantity": 1,
+      "total_price": 200000,
+      "id": 1
+    },
+    {
+      "name": "dang duc thang",
+      "sdt": "0131233123",
+      "email": "a@gmail.com",
+      "address": "cvahscabasci-cqw",
+      "delivery": "Thanh toán trước",
+      "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet nisl mi, eget malesuada tortor condimentum eu. Integer eleifend ante vitae turpis bibendum, quis accumsan nunc convallis. Integer rutrum augue at tortor sodales mattis. Aliquam efficitur, felis et vestibulum vehicula, neque ante ullamcorper nibh, at mollis sem nibh eget magna. Duis mollis viverra magna vitae lobortis. In malesuada id quam quis dignissim. Etiam rhoncus ullamcorper orci, non placerat metus efficitur vitae. Curabitur ultricies sed orci id scelerisque. Quisque consequat, eros sit amet lacinia fringilla, massa ligula convallis libero, non mollis enim odio id magna. ",
+      "order": [
+        {
+          "id": 2,
+          "book_name": "Combo ebook Hiphop",
+          "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
+          "book_price": 200000,
+          "book_quantity": 20,
+          "book_author": "Nguyễn Văn A",
+          "book_date": 2000,
+          "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "total_quantity": 1
+        }
+      ],
+      "total_quantity": 1,
+      "total_price": 200000,
+      "id": 2
+    },
+    {
+      "name": "dang duc thang",
+      "sdt": "0131233123",
+      "email": "a@gmail.com",
+      "address": "cvahscabasci-cqw",
+      "delivery": "Nhận khi giao hàng",
+      "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet nisl mi, eget malesuada tortor condimentum eu. Integer eleifend ante vitae turpis bibendum, quis accumsan nunc convallis. Integer rutrum augue at tortor sodales mattis. Aliquam efficitur, felis et vestibulum vehicula, neque ante ullamcorper nibh, at mollis sem nibh eget magna. Duis mollis viverra magna vitae lobortis. In malesuada id quam quis dignissim. Etiam rhoncus ullamcorper orci, non placerat metus efficitur vitae. Curabitur ultricies sed orci id scelerisque. Quisque consequat, eros sit amet lacinia fringilla, massa ligula convallis libero, non mollis enim odio id magna. ",
+      "order": [
+        {
+          "id": 6,
+          "book_name": "Combo ebook Susie",
+          "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
+          "book_price": 200000,
+          "book_quantity": 20,
+          "book_author": "Nguyễn Văn A",
+          "book_date": 2000,
+          "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "total_quantity": 6
+        },
+        {
+          "id": 5,
+          "book_name": "Combo ebook Bổn ",
+          "book_image": "https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg",
+          "book_price": 200000,
+          "book_quantity": 20,
+          "book_author": "Nguyễn Văn A",
+          "book_date": 2000,
+          "book_short_description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "book_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "total_quantity": 6
+        }
+      ],
+      "total_quantity": 12,
+      "total_price": 3600000,
+      "id": 3
     }
   ]
 }

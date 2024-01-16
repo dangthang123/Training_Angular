@@ -1,0 +1,52 @@
+<h3 class="m-4">Thông tin đã đặt hàng</h3>
+<mat-accordion *ngIf="dataOrders">
+    <mat-expansion-panel hideToggle *ngFor="let item of dataOrders">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <strong>Họ và tên: </strong> {{item.name}}
+            </mat-panel-title>
+            <mat-panel-title>
+                <strong>Hình thức thanh toán:</strong> {{item.delivery}}
+            </mat-panel-title>
+            <mat-panel-description>
+                <strong>Tổng số lượng :</strong> {{item.total_quantity}}
+            </mat-panel-description>
+            <mat-panel-description>
+                <strong>Tổng giá :</strong> {{item.total_price|currency:'VND':'symbol':'4.0'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="des d-flex gap-3 ">
+            <p><strong>Gmail:</strong> {{item.email}}</p>
+            <p><strong>Số điện thoại:</strong> {{item.sdt}}</p>
+        </div>
+        <div class="des">
+            <p><strong>Địa chỉ:</strong> {{item.address}}</p>
+            <p><strong>Mô tả:</strong> {{item.describe}}</p>
+        </div>
+        <table>
+            <thead>
+                <th>STT</th>
+                <th>Ảnh </th>
+                <th>Tên</th>
+                <th>Tác giả</th>
+                <th>Năm xuất bản</th>
+                <th>Giá</th>
+                <th>Số lượng còn lại</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ite of item.order;let i=index">
+                    <td>{{i+1}}</td>
+                    <td class="w-25">
+                        <img [src]="ite.book_image" alt="img" class="w-25" />
+                    </td>
+                    <td>{{ite.book_name}}</td>
+                    <td>{{ite.book_author}}</td>
+                    <td>{{ite.book_date }}</td>
+                    <td>{{ite.book_price}}</td>
+                    <td>{{ite.book_quantity}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </mat-expansion-panel>
+</mat-accordion>
